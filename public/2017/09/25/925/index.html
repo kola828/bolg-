@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//litten.me">
-  <title>Archives | 马文卓</title>
+  <title>项目总结的（一） | 马文卓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="此为mwz的博客">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,编程,代码,IT网站,Developer,Programmer,Coder,html,css,css3,vue,vuex">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马文卓">
-<meta property="og:url" content="//litten.me/archives/index.html">
+  <meta name="description" content="这是一个重构的公众号项目，修改的主要是UI,所以关于css的内容比较多 label与radio绑定的方法1.方法一 12&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;marry&amp;quot; id=&amp;quot;women&amp;quot; &amp;gt;&amp;lt;label for=&amp;quot;women&amp;quot;&amp;gt;女&amp;lt;/label&amp;gt; 2.方法二123">
+<meta name="keywords" content="项目总结,css,适配">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目总结的（一）">
+<meta property="og:url" content="//litten.me/2017/09/25/925/index.html">
 <meta property="og:site_name" content="马文卓">
-<meta property="og:description" content="此为mwz的博客">
+<meta property="og:description" content="这是一个重构的公众号项目，修改的主要是UI,所以关于css的内容比较多 label与radio绑定的方法1.方法一 12&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;marry&amp;quot; id=&amp;quot;women&amp;quot; &amp;gt;&amp;lt;label for=&amp;quot;women&amp;quot;&amp;gt;女&amp;lt;/label&amp;gt; 2.方法二123">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2017-10-25T07:15:08.342Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马文卓">
-<meta name="twitter:description" content="此为mwz的博客">
+<meta name="twitter:title" content="项目总结的（一）">
+<meta name="twitter:description" content="这是一个重构的公众号项目，修改的主要是UI,所以关于css的内容比较多 label与radio绑定的方法1.方法一 12&amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;marry&amp;quot; id=&amp;quot;women&amp;quot; &amp;gt;&amp;lt;label for=&amp;quot;women&amp;quot;&amp;gt;女&amp;lt;/label&amp;gt; 2.方法二123">
   
     <link rel="alternative" href="/atom.xml" title="马文卓" type="application/atom+xml">
   
@@ -148,36 +149,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-925" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/25/925/" class="archive-article-date">
-  	<time datetime="2017-09-25T07:02:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/25/925/">项目总结的（一）</a>
+    <h1 class="article-title" itemprop="name">
+      项目总结的（一）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/09/25/925/" class="archive-article-date">
+  	<time datetime="2017-09-25T07:02:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这是一个重构的公众号项目，修改的主要是UI,所以关于css的内容比较多</p>
+<h1 id="label与radio绑定的方法"><a href="#label与radio绑定的方法" class="headerlink" title="label与radio绑定的方法"></a>label与radio绑定的方法</h1><p>1.方法一</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;radio&quot; name=&quot;marry&quot; id=&quot;women&quot; &gt;</div><div class="line">&lt;label for=&quot;women&quot;&gt;女&lt;/label&gt;</div></pre></td></tr></table></figure>
+<p>2.方法二<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 可定义label宽度，增加点击响应区域</div><div class="line">&lt;label for=&quot;women&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;marry&quot; id=&quot;women&quot;&gt;女&lt;/label&gt;</div><div class="line">```  </div><div class="line"></div><div class="line"># 表单提交时input获取焦点安卓手机软键盘弹出有时会遮挡内容解决方案</div></pre></td></tr></table></figure></p>
+<p>//判断手机版本<br>var browser = {<br>  versions: function () {<br>    var u = navigator.userAgent, app = navigator.appVersion;<br>    return {         //移动终端浏览器版本信息<br>      trident: u.indexOf(‘Trident’) &gt; -1, //IE内核<br>      presto: u.indexOf(‘Presto’) &gt; -1, //opera内核<br>      webKit: u.indexOf(‘AppleWebKit’) &gt; -1, //苹果、谷歌内核<br>      gecko: u.indexOf(‘Gecko’) &gt; -1 &amp;&amp; u.indexOf(‘KHTML’) == -1, //火狐内核<br>      mobile: !!u.match(/AppleWebKit.<em>Mobile.</em>/), //是否为移动终端<br>      ios: !!u.match(/(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端<br>      android: u.indexOf(‘Android’) &gt; -1 || u.indexOf(‘Linux’) &gt; -1, //android终端或uc浏览器<br>      iPhone: u.indexOf(‘iPhone’) &gt; -1, //是否为iPhone或者QQHD浏览器<br>      iPad: u.indexOf(‘iPad’) &gt; -1, //是否iPad<br>      webApp: u.indexOf(‘Safari’) == -1 //是否web应该程序，没有头部与底部<br>    };<br>  }(),<br>  language: (navigator.browserLanguage || navigator.language).toLowerCase()<br>};</p>
+<p>// 是安卓收的话 重新resize页面<br> if(browser.versions.android){<br>    window.addEventListener(“resize”, function() {<br>      if(document.activeElement.tagName==”INPUT” || document.activeElement.tagName==”TEXTAREA”) {<br>        window.setTimeout(function() {<br>          document.activeElement.scrollIntoViewIfNeeded();<br>        },0);<br>      }<br>    })<br>  }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># css 技巧总结</div><div class="line"></div><div class="line">## 1.滚动不流畅(主要是ios)</div></pre></td></tr></table></figure></p>
+<p>overflow-y : auto;<br>overflow-scrolling  touch<br>-webkit-overflow-scrolling: touch; /<em> ios5+ </em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">## 2.pointer-events: none的用处</div><div class="line">   鼠标点击事件禁用</div><div class="line">   </div><div class="line">    1.可防止表单重复提交，在点击按钮是加上这个属性，接口返回成功是去掉</div><div class="line">       </div><div class="line">    2.可在select框后自定义图标，在点击自定义图案时，依然响应select的事件</div><div class="line"></div><div class="line"></div><div class="line">## 3.radio与checkbox的美化</div></pre></td></tr></table></figure></p>
+<p><input type="radio"></p>
+<p><label class="f-grey">公司</label><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>.radio-group<br>  display inline-block<br>  input<br>    position relative<br>    margin-right 5px<br>  input[type=radio]:before<br>    display inline-block<br>    content ‘’;<br>    width 16px;<br>    height 16px;<br>    background-size 100%<br>    top -2px<br>    left -2px<br>    z-index: 2;<br>    border: 2px solid #2696f3;<br>    border-radius: 50%;<br>    position absolute<br>    background #ffffff<br>  input[type=radio]:checked:after<br>    display inline-block<br>    content ‘’;<br>    width 12px;<br>    height 12px;<br>    background-size 100%<br>    top 2px<br>    left 2px<br>    z-index: 2;<br>    border-radius: 50%;<br>    position absolute<br>    background #2696f3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">## 4.尽量少使用 filter 属性</div><div class="line"></div><div class="line"> filter 也会增大内存消耗。最不能忍受的是 filte样式在每个页面元素（使用到该 filter 样式）渲染时都会被浏览器分析一次，而不是像一般的背景图片渲染模式：使用过该背景图片的所有元素都是被浏览器一次性渲染的。</div><div class="line">    </div><div class="line">## 5.动画卡顿的解决办法</div><div class="line"></div><div class="line">为动画DOM元素添加CSS3样式</div></pre></td></tr></table></figure></p>
+<p>-webkit-transform:transition3d(0,0,0)<br>或-webkit-transform:translateZ(0);，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">这两个属性都会开启GPU硬件加速模式，从而让浏览器在渲染动画时从CPU转向GPU</div><div class="line"></div><div class="line">## 6.改变input里placeholder默认显示字的样式</div><div class="line">例：改变颜色</div></pre></td></tr></table></figure></p>
+<p>input::-webkit-input-placeholder{<br>    color:red;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">## 7.ios上input有时有默认的内部阴影</div></pre></td></tr></table></figure></p>
+<p>-webkit-appearance: none; /<em>去除系统默认的样式</em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 6.label两端对齐的方法（存在兼容性问题）</div></pre></td></tr></table></figure></p>
+<p>text-align:justify;<br>text-justify:distribute-all-lines;/<em>ie6-8</em>/<br>text-align-last:justify;/<em> ie9</em>/<br>-moz-text-align-last:justify;/<em>ff</em>/<br>-webkit-text-align-last:justify;/<em>chrome 20+</em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"># flex 布局</div><div class="line">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</div><div class="line"></div><div class="line"># 控制微信自带的返回按钮</div></pre></td></tr></table></figure></p>
+<p>function closePage() {<br>  window.history.pushState({}, ‘title’, null);<br>  window.addEventListener(‘popstate’, function() { // 若使用 on 绑定事件在某些机型不触发事件函数<br>    if (sessionStorage.getItem(‘back’)) {<br>        WeixinJSBridge.call(‘closeWindow’)  //这里可以关闭页面或者跳转到指定页面<br>    } else {<br>      sessionStorage.setItem(‘back’, true)<br>    }<br>  });<br>  window.onpageshow = function () {<br>    setTimeout(function () { // 修复 ios 平台跳转后再返回触发 popstate 事件时已经设置 sessionStorage 存储,导致直接关闭页面<br>      sessionStorage.setItem(‘back’, true)<br>    })<br>  };</p>
+<p>  window.onpagehide = function () {<br>    sessionStorage.removeItem(‘back’)<br>  }</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># js实现复制内容到剪切板</div></pre></td></tr></table></figure>
+<p>/**</p>
+<ul>
+<li>@description 复制内容到剪切板中</li>
+<li><p>@param input<br>*/<br>function copy(input) {</p>
+<p>var isiOSDevice = navigator.userAgent.match(/ipad|iphone/i);<br>if (isiOSDevice) {<br> var editable = input.contentEditable;<br> var readonly = input.readOnly;<br> input.contentEditable = true;<br> input.readonly = false;<br> var range = document.createRange();<br> range.selectNodeContents(input);<br> var selection = window.getSelection();<br> selection.removeAllRanges();<br> selection.addRange(range);</p>
+<p> input.setSelectionRange(0, 999999);</p>
+<p> input.contentEditable = editable;<br> input.readOnly = readonly;<br>} else {<br> input.select();<br>}<br>document.execCommand(‘copy’);<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 关于css设计模式</div><div class="line">1. 重置默认样式（reset）</div><div class="line">2. 减少对 HTML 结构的依赖。要避免使用元素选择器</div><div class="line">3. 增加 CSS class 重复性的使用。可以提取使用较频繁的样式，尽量抽离重复的程式码。</div><div class="line"></div><div class="line">相关文章：https://segmentfault.com/a/1190000000388784</div><div class="line">          http://www.cnblogs.com/westsoft/p/5925221.html</div><div class="line"># 关于手机端自适应</div><div class="line">## 1.rem</div><div class="line">rem是相当于根元素的</div><div class="line"></div><div class="line">方法一</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>html {font-size: 62.5%;/<em>10 ÷ 16 × 100% = 62.5%</em>/}<br>body {font-size: 1.4rem;/<em>1.4 × 10px = 14px </em>/}<br>h1 { font-size: 2.4rem;/<em>2.4 × 10px = 24px</em>/}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">方法二</div></pre></td></tr></table></figure>
+<p>(function(doc, win) {<br>    var docEl = doc.documentElement,<br>        resizeEvt = ‘orientationchange’ in window ? ‘orientationchange’ : ‘resize’,<br>        recalc = function() {<br>            var clientWidth = docEl.clientWidth;<br>            if (!clientWidth) return;<br>            docEl.style.fontSize = 14 * (clientWidth / 320) + ‘px’;<br>        };<br>    if (!doc.addEventListener) return;<br>    win.addEventListener(resizeEvt, recalc, false);<br>    doc.addEventListener(‘DOMContentLoaded’, recalc, false);<br>})(document, window);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">## 2.viewport缩放</div></pre></td></tr></table></figure>
+<p><meta name="viewport" content="width=320,maximum-scale=1.3,user-scalable=no"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## 3.媒体查询</div></pre></td></tr></table></figure></p>
+<p>@media screen and (min-width: 320px) {<br>    html {font-size: 14px;}<br>}</p>
+<p>@media screen and (min-width: 360px) {<br>    html {font-size: 16px;}<br>}</p>
+<p>@media screen and (min-width: 400px) {<br>    html {font-size: 18px;}<br>}</p>
+<p>@media screen and (min-width: 440px) {<br>    html {font-size: 20px;}<br>}</p>
+<p>@media screen and (min-width: 480px) {<br>    html {font-size: 22px;}<br>}</p>
+<p>@media screen and (min-width: 640px) {<br>    html {font-size: 28px;}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">## 4.vw</div><div class="line"></div><div class="line">不知道大家是不是把 rem 设置成了某个比较好算的宽度，所以切图更得心应手，但 vw 其实是 1% 个屏幕宽度,的确这样算起来不方便，这我觉得算是一个vw不好的地方。但是，作为一名与时俱进的前端工程师，你知道 CSS3 有个函数叫 calc 吗？有人可能会说 calc 目前支持度还有点问题。你知道 SASS 或者 LESS 吧？你知道它们是可以做算术题的吧？你知道它们可以写 function 吧？</div></pre></td></tr></table></figure></p>
+<!--Sass-->
+<p>@function pxToVw($px, $screen-width: 750) {<br>  @return ($px / $screen-width) * 100vw;<br>}</p>
+<p>```</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,57 +237,81 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/20/sss/" class="archive-article-date">
-  	<time datetime="2017-09-20T06:28:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/20/sss/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一次使用Hexo + Github Page 搭建个人博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/20/sss/">第一次使用Hexo + Github Page 搭建个人博客</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<!--<div class="ds-thread" data-thread-key="925" data-title="项目总结的（一）" data-url="//litten.me/2017/09/25/925/"></div>-->
+
+	<!-- UY BEGIN -->
+	<div id="uyan_frame"></div>
+	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+	<!-- UY END -->
+
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<!--<script type="text/javascript">-->
+	<!--var duoshuoQuery = {short_name:"true"};-->
+	<!--(function() {-->
+		<!--var ds = document.createElement('script');-->
+		<!--ds.type = 'text/javascript';ds.async = true;-->
+		<!--ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';-->
+		<!--ds.charset = 'UTF-8';-->
+		<!--(document.getElementsByTagName('head')[0]-->
+		 <!--|| document.getElementsByTagName('body')[0]).appendChild(ds);-->
+	<!--})();-->
+	<!--</script>-->
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -270,8 +334,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

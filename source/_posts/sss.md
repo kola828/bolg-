@@ -1,5 +1,6 @@
 ---
-title: 第一次使用Hexo + Github Page 搭建个人博客的心酸史
+layout: posts
+title: 第一次使用Hexo + Github Page 搭建个人博客
 date: 2017-09-20 14:28:19
 tags: Hexo
 reward: false
@@ -40,3 +41,74 @@ reward: false
 ### 关于Hexo
 
  首先中文文档奉上 https://hexo.io/zh-cn/docs/
+ (注意 请尽量使用git操作，不要使用cmd命令窗口)
+ -  安装hexo
+ ``` 
+  $ npm install -g hexo-cli
+  ```
+ -  安装完成后,请执行下列命令。
+ ```
+ $ hexo init <folder>
+ $ cd <folder>
+ $ npm install
+ ```
+Hexo 将会在指定文件夹中新建所需要的文件。目录结构如下:
+```
+.
+├── _config.yml   //网站的配置信息
+├── package.json  //应用程序的信息
+├── scaffolds     //模版文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件
+├── source        //资源文件夹是存放用户资源的地方
+|   ├── _drafts
+|   └── _posts
+└── themes        //主题 文件夹。Hexo 会根据主题来生成静态页面。
+```
+
+- 新建文章
+
+
+````
+$ hexo new "文章标题"
+
+```
+
+这样你可以在你本地的博客文件中source->_post文件夹下看到我们新建的markdown文件。
+你可以是用markdown编辑器对其进行编辑
+
+保存成功后 可以下面的命令进行本地发布,在浏览器打开 http://localhost:4000/ 就可以看到博客和刚刚发布的文章了
+```
+$ hexo s
+```
+
+至此博客已经搭建完成了，剩下的就是将其发布到github page上了
+
+
+### 发布到github page
+
+- 修改配置文件
+
+打开 _config.yml 文件
+
+修改deploy
+```
+deploy:
+  type: git
+  repo: https://github.com/kola828/kola828.github.io.git  //刚刚新建的github地址
+  branch: master
+```
+
+- 发布
+ 运行下面的命令
+ ```
+ $ hexo g
+ $ hexo d
+ ```
+访问 https://（你的github名称）.github.io/  就可以看到你的博客了
+
+ ### 结束
+ 
+ 这篇教程只是搭建一个简单的博客，你也可以根据你的需求，进行修改.
+ 当然你也可以选择不同的主题对你的博客进行美化
+ 这篇文章里有一些好看的hexo主题推荐,希望可以给你带来帮助
+ https://www.zhihu.com/question/24422335
+ 
