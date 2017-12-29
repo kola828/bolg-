@@ -6,19 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//litten.me">
-  <title>Tag: es6笔记 | 马文卓</title>
+  <title>原生js练习系列——轮播 | 马文卓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="此为mwz的博客">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,编程,代码,IT网站,Developer,Programmer,Coder,html,css,css3,vue,vuex">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马文卓">
-<meta property="og:url" content="//litten.me/tags/es6笔记/index.html">
+  <meta name="description" content="在论坛上看到一句话——框架可以让你走的更快，原生可以让你走的更远。对这句话十分赞同。在工作中为了高效的完成项目，一直在使用框架，以至于自己对原生的一些东西都有点生疏，所以决定在空闲时，写点东西练练手。轮播是项目中使用率很高的，所以就从轮播开始好了。">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生js练习系列——轮播">
+<meta property="og:url" content="//litten.me/2017/07/01/20170701/index.html">
 <meta property="og:site_name" content="马文卓">
-<meta property="og:description" content="此为mwz的博客">
+<meta property="og:description" content="在论坛上看到一句话——框架可以让你走的更快，原生可以让你走的更远。对这句话十分赞同。在工作中为了高效的完成项目，一直在使用框架，以至于自己对原生的一些东西都有点生疏，所以决定在空闲时，写点东西练练手。轮播是项目中使用率很高的，所以就从轮播开始好了。">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="//litten.me/img/artImg/2107070101.png">
+<meta property="og:image" content="//litten.me/img/artImg/2017070102.png">
+<meta property="og:image" content="//litten.me/img/artImg/2017010103.png">
+<meta property="og:image" content="//litten.me/img/artImg/2017070104.png">
+<meta property="og:updated_time" content="2017-12-05T07:03:06.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马文卓">
-<meta name="twitter:description" content="此为mwz的博客">
+<meta name="twitter:title" content="原生js练习系列——轮播">
+<meta name="twitter:description" content="在论坛上看到一句话——框架可以让你走的更快，原生可以让你走的更远。对这句话十分赞同。在工作中为了高效的完成项目，一直在使用框架，以至于自己对原生的一些东西都有点生疏，所以决定在空闲时，写点东西练练手。轮播是项目中使用率很高的，所以就从轮播开始好了。">
+<meta name="twitter:image" content="//litten.me/img/artImg/2107070101.png">
   
     <link rel="alternative" href="/atom.xml" title="马文卓" type="application/atom+xml">
   
@@ -148,36 +154,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20170701" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/15/20171015/" class="archive-article-date">
-  	<time datetime="2017-10-15T08:42:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/15/20171015/">es6之Class的基本语法</a>
+    <h1 class="article-title" itemprop="name">
+      原生js练习系列——轮播
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/07/01/20170701/" class="archive-article-date">
+  	<time datetime="2017-07-01T11:09:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在论坛上看到一句话——框架可以让你走的更快，原生可以让你走的更远。<br>对这句话十分赞同。<br>在工作中为了高效的完成项目，一直在使用框架，以至于自己对原生的一些东西都有点生疏，<br>所以决定在空闲时，写点东西练练手。<br>轮播是项目中使用率很高的，所以就从轮播开始好了。<br><a id="more"></a></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>轮播一般是几个大小相同的块儿在一个div内循环,一般是使用图片。</p>
+<ol>
+<li>应该准备一个div,让你需要轮播的内容在里面循环</li>
+<li>将需要轮播的div放在一行</li>
+<li>加入动画，使其可以自动播放或者点击切换<br><img src="/img/artImg/2107070101.png" alt="image"></li>
+</ol>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;content&quot;&gt;</div><div class="line">   //滚动区域</div><div class="line">  &lt;div class=&quot;swiper_group&quot; id=&quot;group&quot; style=&quot;left: 0&quot;&gt;</div><div class="line">    &lt;div class=&quot;swiper&quot; style=&quot;background-color: red&quot;&gt;第一个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;swiper&quot; style=&quot;background-color: green&quot;&gt;第二个&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;swiper&quot; style=&quot;background-color: blue&quot;&gt;第三个&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  //左右箭头</div><div class="line">  &lt;div class=&quot;nav_left&quot; onclick=&quot;goOther(&apos;left&apos;)&quot;&gt; &lt;&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;nav_right&quot; onclick=&quot;goOther(&apos;right&apos;)&quot;&gt; &gt;&lt;/div&gt;</div><div class="line">  //底部list</div><div class="line">  &lt;div class=&quot;nav_bottom&quot;&gt;</div><div class="line">    &lt;ul&gt;</div><div class="line">      &lt;li onclick=&quot;jump(0)&quot;&gt;1&lt;/li&gt;</div><div class="line">      &lt;li onclick=&quot;jump(1)&quot;&gt;2&lt;/li&gt;</div><div class="line">      &lt;li onclick=&quot;jump(2)&quot;&gt;3&lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>样式尽量不要写行内样式，此处是我偷懒….<br>虽然很多轮播里面就是图片但是我依然使用的是div，这样可以根据自己的需求在里面放不同的内容,不仅仅限于图片</p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p>样式写的比较简陋,可根据自己需求调整<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">.content &#123;</div><div class="line">      position: relative;</div><div class="line">      width: 300px;</div><div class="line">      height: 150px;</div><div class="line">      overflow: hidden;</div><div class="line">    &#125;</div><div class="line">    .swiper_group &#123;</div><div class="line">      width: 900px;</div><div class="line">      position: absolute;</div><div class="line">      transition: all 1s; /*过度效果*/</div><div class="line">      -moz-transition: all 1s;;</div><div class="line">      -webkit-transition: all 1s;;</div><div class="line">      -o-transition: all 1s;;</div><div class="line">    &#125;</div><div class="line">    .swiper &#123;</div><div class="line">      color: white;</div><div class="line">      width: 300px;</div><div class="line">      height: 150px;</div><div class="line">      box-sizing: border-box;</div><div class="line">      border: 1px solid black;</div><div class="line">      float: left;</div><div class="line">    &#125;</div><div class="line">    .nav_bottom &#123;</div><div class="line">      position: absolute;</div><div class="line">      bottom: 0;</div><div class="line">      left: 75px;</div><div class="line">    &#125;</div><div class="line">    .nav_left &#123;</div><div class="line">      cursor: pointer;</div><div class="line">      color: white;</div><div class="line">      font-size: 25px;</div><div class="line">      position: absolute;</div><div class="line">      left: 0px;</div><div class="line">      top: 60px;</div><div class="line">    &#125;</div><div class="line">    .nav_right &#123;</div><div class="line">      cursor: pointer;</div><div class="line">      color: white;</div><div class="line">      font-size: 25px;</div><div class="line">      position: absolute;</div><div class="line">      right: 0px;</div><div class="line">      top: 60px;</div><div class="line">    &#125;</div><div class="line">    .nav_bottom ul li &#123;</div><div class="line">      list-style-type: none;</div><div class="line">      cursor: pointer;</div><div class="line">      display: inline-block;</div><div class="line">      width: 15px;</div><div class="line">      height: 15px;</div><div class="line">      line-height: 15px;</div><div class="line">      text-align: center;</div><div class="line">      background-color: #9d9d9d;</div><div class="line">    &#125;</div><div class="line">    .active &#123;</div><div class="line">      color: #9acfea;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">(function () &#123;</div><div class="line">    let index = 0;</div><div class="line">    const _group = document.getElementById(&apos;group&apos;);</div><div class="line">    const _item = document.getElementsByClassName(&apos;swiper&apos;);</div><div class="line">    const _li = document.getElementsByTagName(&apos;li&apos;);</div><div class="line">    const _l = _li.length;</div><div class="line"></div><div class="line">    //底下的按钮 当前高亮</div><div class="line">    botNav = (index) =&gt; &#123;</div><div class="line">      for (let i = 0; i &lt; _li.length; i++) &#123;</div><div class="line">        _li[i].className = &apos; &apos;;</div><div class="line">      &#125;</div><div class="line">      _li[index].className = &apos;active&apos;;</div><div class="line">    &#125;;</div><div class="line">    botNav(index);</div><div class="line">    //底下的按钮点击跳转</div><div class="line">    jump = (i) =&gt; &#123;</div><div class="line">      botNav(i);</div><div class="line">      index = i;</div><div class="line">      _group.style.left = &apos;-&apos; + (_item[0].offsetWidth * i) + &apos;px&apos;</div><div class="line">    &#125;;</div><div class="line">    //切换图片</div><div class="line">    changeDiv = () =&gt; &#123;</div><div class="line">      let left = parseInt(_group.style.left);</div><div class="line">      let w_width = _group.offsetWidth;</div><div class="line">      let i_width = _item[0].offsetWidth;</div><div class="line">      if (Math.abs(left) &gt;= (w_width - i_width)) &#123;</div><div class="line">        index = 0;</div><div class="line">        _group.style.left = 0;</div><div class="line">      &#125; else &#123;</div><div class="line">        index++;</div><div class="line">        _group.style.left = (left - _item[0].offsetWidth) + &apos;px&apos;;</div><div class="line">      &#125;</div><div class="line">      botNav(index)</div><div class="line">    &#125;;</div><div class="line">    //左右按钮</div><div class="line">    goOther = (dir) =&gt; &#123;</div><div class="line">      let left = parseInt(_group.style.left);</div><div class="line">      let i_width = _item[0].offsetWidth;</div><div class="line">      let w = -(_group.offsetWidth - _item[0].offsetWidth);</div><div class="line"></div><div class="line">      if (dir == &apos;left&apos;) &#123;</div><div class="line">        if (left &gt;= 0) &#123;</div><div class="line">          index = _l;</div><div class="line">          _group.style.left = w + &apos;px&apos;;</div><div class="line">        &#125; else &#123;</div><div class="line">          index--;</div><div class="line">          _group.style.left = (left + i_width) + &apos;px&apos;;</div><div class="line">        &#125;</div><div class="line">      &#125; else &#123;</div><div class="line">        if (left &lt;= w) &#123;</div><div class="line">          index = 0;</div><div class="line">          _group.style.left = 0;</div><div class="line">        &#125; else &#123;</div><div class="line">          index++;</div><div class="line">          _group.style.left = (left - i_width) + &apos;px&apos;;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">      botNav(index)</div><div class="line">    &#125;;</div><div class="line">    setInterval(function () &#123;</div><div class="line">      changeDiv();</div><div class="line">    &#125;, 5000);</div><div class="line">  &#125;)()</div></pre></td></tr></table></figure>
+<p>最后的实际效果如图<br><img src="/img/artImg/2017070102.png" alt="image"><br><img src="/img/artImg/2017010103.png" alt="image"><br><img src="/img/artImg/2017070104.png" alt="image"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>div.style.lefe 只能获取行内样式，可读写</li>
+<li>offsetTop/Left 相对于父元素向下/向左的偏移值，只读属性，获取到的是数字</li>
+<li>offsetHeight/Width只读属性，返回元素结构宽高，包括元素宽高，border，padding，滚动条。</li>
+<li>scrollHeight/Width是一个只读的属性，滚动区域宽高</li>
+<li>scrollTop/Left 属性能够得到或者设置元素滚动到下边/左边的像素值,可读写。</li>
+<li>clientWidth/Height，只读属性包括元素宽高，padding。不包括滚动条，boder，margin。</li>
+<li>clientTop/Left元素到浏览器视口的顶部/左部的距离。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,35 +210,94 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">es6笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">class</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
-        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/09/25/925/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          项目总结的（一）
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/06/20/sss/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一次使用Hexo + Github Page 搭建个人博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<!--<div class="ds-thread" data-thread-key="20170701" data-title="原生js练习系列——轮播" data-url="//litten.me/2017/07/01/20170701/"></div>-->
+
+	<!-- UY BEGIN -->
+	<div id="uyan_frame"></div>
+	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+	<!-- UY END -->
+
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<!--<script type="text/javascript">-->
+	<!--var duoshuoQuery = {short_name:"true"};-->
+	<!--(function() {-->
+		<!--var ds = document.createElement('script');-->
+		<!--ds.type = 'text/javascript';ds.async = true;-->
+		<!--ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';-->
+		<!--ds.charset = 'UTF-8';-->
+		<!--(document.getElementsByTagName('head')[0]-->
+		 <!--|| document.getElementsByTagName('body')[0]).appendChild(ds);-->
+	<!--})();-->
+	<!--</script>-->
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -236,9 +320,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

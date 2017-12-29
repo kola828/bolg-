@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: 第一次使用Hexo + Github Page 搭建个人博客
-date: 2017-09-20 14:28:19
+date: 2017-06-20 14:28:19
 tags: Hexo
 reward: false
 ---
