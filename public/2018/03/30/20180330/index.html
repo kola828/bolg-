@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//litten.me">
-  <title>马文卓</title>
+  <title>基于react的分页组件 | 马文卓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="此为mwz的博客">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,编程,代码,IT网站,Developer,Programmer,Coder,html,css,css3,vue,vuex">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马文卓">
-<meta property="og:url" content="//litten.me/index.html">
+  <meta name="description" content="好久没有更新了，前段日子忙着找工作现在确定了从苏州到杭州 换了一个城市 换了一家公司 换了一个环境新的公司用的很多东西之前都没有接触过还需要很努力很努力 继续加油吧">
+<meta name="keywords" content="react,组件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于react的分页组件">
+<meta property="og:url" content="//litten.me/2018/03/30/20180330/index.html">
 <meta property="og:site_name" content="马文卓">
-<meta property="og:description" content="此为mwz的博客">
+<meta property="og:description" content="好久没有更新了，前段日子忙着找工作现在确定了从苏州到杭州 换了一个城市 换了一家公司 换了一个环境新的公司用的很多东西之前都没有接触过还需要很努力很努力 继续加油吧">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-03-30T02:49:38.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马文卓">
-<meta name="twitter:description" content="此为mwz的博客">
+<meta name="twitter:title" content="基于react的分页组件">
+<meta name="twitter:description" content="好久没有更新了，前段日子忙着找工作现在确定了从苏州到杭州 换了一个城市 换了一家公司 换了一个环境新的公司用的很多东西之前都没有接触过还需要很努力很努力 继续加油吧">
   
     <link rel="alternative" href="/atom.xml" title="马文卓" type="application/atom+xml">
   
@@ -154,16 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-20180330" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-20180330" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/30/20180330/">基于react的分页组件</a>
+    <h1 class="article-title" itemprop="name">
+      基于react的分页组件
     </h1>
   
 
@@ -176,10 +175,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>好久没有更新了，前段日子忙着找工作<br>现在确定了<br>从苏州到杭州 换了一个城市 换了一家公司 换了一个环境<br>新的公司用的很多东西之前都没有接触过<br>还需要很努力很努力 继续加油吧<br>
-        
-          <a class="article-more-a" href="/2018/03/30/20180330/#more"></a>
-        
+        <p>好久没有更新了，前段日子忙着找工作<br>现在确定了<br>从苏州到杭州 换了一个城市 换了一家公司 换了一个环境<br>新的公司用的很多东西之前都没有接触过<br>还需要很努力很努力 继续加油吧<br><a id="more"></a><br>之前没有使用说react进行开发过 但是新的公司使用react 所以必须会了<br>这是为了熟悉react 所写的一个分页组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line">import React from &apos;react&apos;</span><br><span class="line"></span><br><span class="line">class Pager extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      goPage: null,</span><br><span class="line">      pageTotal: parseInt(this.props.total / this.props.size)</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line"></span><br><span class="line">    var cur = this.props.cur,</span><br><span class="line">      total = this.props.total,</span><br><span class="line">      size = this.props.size,</span><br><span class="line">      pageTotal = parseInt(total / size),</span><br><span class="line">      level = 2;</span><br><span class="line">    var layout = this.props.layout.split(&apos;,&apos;);</span><br><span class="line">    var isTotal = layout.indexOf(&apos;total&apos;) === -1 ? false : true;</span><br><span class="line">    var isPrev = layout.indexOf(&apos;prev&apos;) === -1 ? false : true;</span><br><span class="line">    var isNext = layout.indexOf(&apos;next&apos;) === -1 ? false : true;</span><br><span class="line">    var isPage = layout.indexOf(&apos;page&apos;) === -1 ? false : true;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // 当没有total时，返回 空</span><br><span class="line">    if (!pageTotal) return &lt;div className=&quot;Pager&quot;&gt;&amp;nbsp;&lt;/div&gt;;</span><br><span class="line"></span><br><span class="line">    var list = [];</span><br><span class="line">    // 上一页按钮</span><br><span class="line">    isPrev ? list.push(&lt;a onClick=&#123;this.prevClick.bind(this)&#125; key=&#123;0&#125;&gt; &amp;lt; &lt;/a&gt;) : &apos;&apos;;</span><br><span class="line">    if (pageTotal &lt; 7) &#123;</span><br><span class="line">      // 当总条数小于层级时 全部列出来</span><br><span class="line">      for (let i = 1; i &lt;= pageTotal; i++) &#123;</span><br><span class="line">        list.push(&lt;a key=&#123;i&#125; onClick=&#123;this.click.bind(this, i)&#125; className=&#123;i === cur ? &apos;active&apos; : &apos;&apos;&#125;&gt;&#123;i&#125;&lt;/a&gt;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // 显示...</span><br><span class="line">      if (cur - level &gt;= level) &#123;</span><br><span class="line">        list.push(&lt;a key=&#123;1&#125; onClick=&#123;this.click.bind(this, 1)&#125; className=&#123;1 === cur ? &apos;active&apos; : &apos;&apos;&#125;&gt;&#123;1&#125;&lt;/a&gt;);</span><br><span class="line">        if (cur - level &gt; level) &#123; // 处理当前页为4时出现&quot;...&quot;的问题</span><br><span class="line">          list.push(&lt;a key=&#123;-1&#125;&gt;...&lt;/a&gt;);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      // 显示页码</span><br><span class="line">      for (let i = cur - level; i &lt;= cur + level; i++) &#123;</span><br><span class="line">        if (i &lt; pageTotal &amp;&amp; i &gt; 0) &#123;</span><br><span class="line">          list.push(&lt;a key=&#123;i&#125; onClick=&#123;this.click.bind(this, i)&#125; className=&#123;i === cur ? &apos;active&apos; : &apos;&apos;&#125;&gt;&#123;i&#125;&lt;/a&gt;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      // 显示...</span><br><span class="line">      if (pageTotal &gt;= cur + level * 2) &#123;</span><br><span class="line">        list.push(&lt;a key=&#123;-2&#125;&gt;...&lt;/a&gt;);</span><br><span class="line">      &#125;</span><br><span class="line">      //最后一页</span><br><span class="line">      list.push(&lt;a key=&#123;pageTotal&#125; onClick=&#123;this.click.bind(this, pageTotal)&#125;</span><br><span class="line">                   className=&#123;pageTotal === cur ? &apos;active&apos; : &apos;&apos;&#125;&gt;&#123;pageTotal&#125;&lt;/a&gt;)</span><br><span class="line">    &#125;</span><br><span class="line">    // 下一页按钮</span><br><span class="line">    isNext ? list.push(&lt;a onClick=&#123;this.nextClick.bind(this)&#125; key=&#123;pageTotal + 1&#125;&gt; &amp;gt; &lt;/a&gt;) : &apos;&apos;;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div className=&quot;Pager&quot;&gt;</span><br><span class="line">        &#123;isTotal ? &lt;span className=&apos;total&apos;&gt;共&#123;total&#125;条&lt;/span&gt; : &apos;&apos;&#125;</span><br><span class="line">        &#123;list&#125;</span><br><span class="line">        &#123;</span><br><span class="line">          isPage ? &lt;div className=&quot;pageGo&quot;&gt;&lt;span&gt;前往&lt;/span&gt;&lt;input type=&apos;text&apos; onChange=&#123;this._inputChange.bind(this)&#125;/&gt;&lt;span&gt;页&lt;/span&gt;</span><br><span class="line">            &lt;button onClick=&#123;this.goPage.bind(this)&#125;&gt;go&lt;/button&gt;</span><br><span class="line">          &lt;/div&gt; : &apos;&apos;</span><br><span class="line">        &#125;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 点击切换当前页</span><br><span class="line">   * @param page</span><br><span class="line">   */</span><br><span class="line">  click(page) &#123;</span><br><span class="line">    if (page &gt; 0)</span><br><span class="line">      this.props.changePage(page);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   *  跳转页面input输入框onchang事件</span><br><span class="line">   * @param e</span><br><span class="line">   * @private</span><br><span class="line">   */</span><br><span class="line">  _inputChange(e) &#123;</span><br><span class="line">    console.log(e.target.value);</span><br><span class="line">    var val = e.target.value;</span><br><span class="line">    e.target.value = val.replace(/[^\d]/g, &apos;&apos;);</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      goPage: e.target.value</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 跳转到input输入页</span><br><span class="line">   */</span><br><span class="line">  goPage() &#123;</span><br><span class="line">    // console.log(this.state.goPage);</span><br><span class="line">    if (this.state.goPage &gt; 0 &amp;&amp; this.state.goPage &lt;= this.state.pageTotal) &#123;</span><br><span class="line">      this.props.changePage(parseInt(this.state.goPage));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 向前一页</span><br><span class="line">   */</span><br><span class="line">  prevClick() &#123;</span><br><span class="line">    if (this.props.cur &gt; 1) &#123;</span><br><span class="line">      this.props.changePage(this.props.cur - 1);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * 向后一页</span><br><span class="line">   */</span><br><span class="line">  nextClick() &#123;</span><br><span class="line">    if (this.props.cur &lt; this.state.pageTotal) &#123;</span><br><span class="line">      console.log(&quot;next&quot;);</span><br><span class="line">      this.props.changePage(this.props.cur + 1);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default Pager;</span><br></pre></td></tr></table></figure>
+<p>调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;</span><br><span class="line">import CommentInput from &apos;./CommentInput&apos;</span><br><span class="line">import CommentList from &apos;./CommentList&apos;</span><br><span class="line">import Pager from &apos;./Pager&apos;</span><br><span class="line"></span><br><span class="line">class CommentApp extends Component &#123;</span><br><span class="line">  constructor()&#123;</span><br><span class="line">    super();</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      cur: 1,   // 当前页</span><br><span class="line">      total: 70,    // 一共有多少条</span><br><span class="line">      pageSize:10,  // 每页多少条</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div className=&apos;content&apos;&gt;</span><br><span class="line">        &lt;Pager cur=&#123;this.state.cur&#125;</span><br><span class="line">               total=&#123;this.state.total&#125;</span><br><span class="line">               size=&#123;this.state.pageSize&#125;</span><br><span class="line">               layout=&quot;total,prev,next,page&quot;</span><br><span class="line">               changePage=&#123;this.changePage.bind(this)&#125; /&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  changePage (page)&#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      cur:page</span><br><span class="line">    &#125;);</span><br><span class="line">    console.log(this.state)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default CommentApp</span><br></pre></td></tr></table></figure></p>
+<p>新的开始还需加油哇~</p>
+
       
 
       
@@ -205,16 +205,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/30/20180330/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/28/20171228/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">记使用vue+node+MySQL的搭建项目</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -234,596 +242,40 @@
 
 
 
-
   
-    <article id="post-20171228" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/28/20171228/">记使用vue+node+MySQL的搭建项目</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/28/20171228/" class="archive-article-date">
-  	<time datetime="2017-12-28T07:36:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这应该算是第一个前后端都是自己写的项目。<br>整个项目的前期构想是希望能够实现一个个人的工作平台，可以记录一些自己的工作笔记、心得，能够建立备忘录提醒自己还有那些事情需要做。以后可以和整个公司的考勤，薪资等等结合起来。想法很美好，但是自己能力有限目前只是实现了登录和对笔记的增删改。其中新增文章支持markdown语法。</p>
-<p>前端技术栈 vue2.0全家桶+Element-UI+axios+stylus</p>
-<p>后端技术栈 node.js+express+mysql<br>
-        
-          <a class="article-more-a" href="/2017/12/28/20171228/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/28/20171228/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20171015" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/15/20171015/">es6之Class的基本语法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/15/20171015/" class="archive-article-date">
-  	<time datetime="2017-10-15T08:42:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>ES6 的class可以看作只是一个语法糖，它的绝大部分功能，ES5 都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法。</p>
-<p>es5转es6示例
-        
-          <a class="article-more-a" href="/2017/10/15/20171015/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">es6笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">class</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/15/20171015/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20170930" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/30/20170930/">iframe 高度自适应</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/30/20170930/" class="archive-article-date">
-  	<time datetime="2017-09-30T08:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>可能因为一工作就上手vue.js的原因，感觉自己对一些原生的东西还是太生疏了<br>虽然有在看《JavaScript高级程序设计》然而对于使用较少的依然是使用较少<br>默念三遍’框架可以让你走的更快，原生可以让你走的更远’</p>
-<p>今天帮别人写了一点公共的东西，使用到iframe,说实在的工作一年以来对iframe接触甚少<br>借此机会总结一下</p>
-<ul>
-<li>如果没有设置iframe的高度的话，它有一个默认的150px的高度</li>
-<li>根据iframe里面内容的高度自适应
-        
-          <a class="article-more-a" href="/2017/09/30/20170930/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">iframe</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/30/20170930/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20170927" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/27/20170927/">移动端常见问题解决方案</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/27/20170927/" class="archive-article-date">
-  	<time datetime="2017-09-27T05:42:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>em。。。。<br>感觉移动端总有改不完的bug<br>苹果，安卓有区别<br>大屏，小屏幕区别
-        
-          <a class="article-more-a" href="/2017/09/27/20170927/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">适配</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/27/20170927/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-925" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/25/925/">项目总结的（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/25/925/" class="archive-article-date">
-  	<time datetime="2017-09-25T07:02:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>工作一年了，其实在工作中经常会遇见相同的问题<br>但是之前都没有总结，经常是这一次解决了，下一次又忘记了<br>所以决定以后将项目中遇到的问题，以及一些坑，都记录下来。
-        
-          <a class="article-more-a" href="/2017/09/25/925/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">适配</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目总结</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/25/925/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20170820" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/20/20170820/">使用vue+vuex+vue-router重构的vue.js社区手机端</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/20/20170820/" class="archive-article-date">
-  	<time datetime="2017-08-20T09:12:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>之前趁着空闲的时候写的一个小项目<br>主要是为了练练手，然后看到vue.js社区上有公共的api就想着拿来用<br>整个项目是使用vue-cli脚手架搭建的<br>使用的技术有<br>vue2 + vuex + vue-router + webpack + ES6 + axios + sass
-        
-          <a class="article-more-a" href="/2017/08/20/20170820/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vuex</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">vue-router</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/20/20170820/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20170705" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/05/20170705/">原生js练习系列——tab切换</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/05/20170705/" class="archive-article-date">
-  	<time datetime="2017-07-05T05:56:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>tab切换也是项目中使用较多的一种效果，很多UI框架中也会有这种组件<br>今天使用原生的js写了一下，发现使用原生实现起来也很简单</p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>tab切换可以简单的理解为切换显示/隐藏的div，点击相应的tab的时候显示其内容</p>
-        
-          <a class="article-more-a" href="/2017/07/05/20170705/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">盒模型</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/05/20170705/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<!--<div class="ds-thread" data-thread-key="20180330" data-title="基于react的分页组件" data-url="//litten.me/2018/03/30/20180330/"></div>-->
+
+	<!-- UY BEGIN -->
+	<div id="uyan_frame"></div>
+	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+	<!-- UY END -->
+
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<!--<script type="text/javascript">-->
+	<!--var duoshuoQuery = {short_name:"true"};-->
+	<!--(function() {-->
+		<!--var ds = document.createElement('script');-->
+		<!--ds.type = 'text/javascript';ds.async = true;-->
+		<!--ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';-->
+		<!--ds.charset = 'UTF-8';-->
+		<!--(document.getElementsByTagName('head')[0]-->
+		 <!--|| document.getElementsByTagName('body')[0]).appendChild(ds);-->
+	<!--})();-->
+	<!--</script>-->
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -846,8 +298,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

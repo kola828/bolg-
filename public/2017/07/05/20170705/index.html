@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//litten.me">
-  <title>马文卓</title>
+  <title>原生js练习系列——tab切换 | 马文卓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="此为mwz的博客">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,编程,代码,IT网站,Developer,Programmer,Coder,html,css,css3,vue,vuex">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马文卓">
-<meta property="og:url" content="//litten.me/index.html">
+  <meta name="description" content="tab切换也是项目中使用较多的一种效果，很多UI框架中也会有这种组件今天使用原生的js写了一下，发现使用原生实现起来也很简单 原理tab切换可以简单的理解为切换显示/隐藏的div，点击相应的tab的时候显示其内容">
+<meta name="keywords" content="JavaScript,盒模型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生js练习系列——tab切换">
+<meta property="og:url" content="//litten.me/2017/07/05/20170705/index.html">
 <meta property="og:site_name" content="马文卓">
-<meta property="og:description" content="此为mwz的博客">
+<meta property="og:description" content="tab切换也是项目中使用较多的一种效果，很多UI框架中也会有这种组件今天使用原生的js写了一下，发现使用原生实现起来也很简单 原理tab切换可以简单的理解为切换显示/隐藏的div，点击相应的tab的时候显示其内容">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="//litten.me/img/artImg/2017070501.png">
+<meta property="og:image" content="//litten.me/img/artImg/2017070502.png">
+<meta property="og:updated_time" content="2018-03-29T11:35:42.437Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马文卓">
-<meta name="twitter:description" content="此为mwz的博客">
+<meta name="twitter:title" content="原生js练习系列——tab切换">
+<meta name="twitter:description" content="tab切换也是项目中使用较多的一种效果，很多UI框架中也会有这种组件今天使用原生的js写了一下，发现使用原生实现起来也很简单 原理tab切换可以简单的理解为切换显示/隐藏的div，点击相应的tab的时候显示其内容">
+<meta name="twitter:image" content="//litten.me/img/artImg/2017070501.png">
   
     <link rel="alternative" href="/atom.xml" title="马文卓" type="application/atom+xml">
   
@@ -154,599 +158,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-20180330" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-20170705" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/30/20180330/">基于react的分页组件</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/30/20180330/" class="archive-article-date">
-  	<time datetime="2018-03-30T02:33:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>好久没有更新了，前段日子忙着找工作<br>现在确定了<br>从苏州到杭州 换了一个城市 换了一家公司 换了一个环境<br>新的公司用的很多东西之前都没有接触过<br>还需要很努力很努力 继续加油吧<br>
-        
-          <a class="article-more-a" href="/2018/03/30/20180330/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">组件</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/30/20180330/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20171228" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/28/20171228/">记使用vue+node+MySQL的搭建项目</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/28/20171228/" class="archive-article-date">
-  	<time datetime="2017-12-28T07:36:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这应该算是第一个前后端都是自己写的项目。<br>整个项目的前期构想是希望能够实现一个个人的工作平台，可以记录一些自己的工作笔记、心得，能够建立备忘录提醒自己还有那些事情需要做。以后可以和整个公司的考勤，薪资等等结合起来。想法很美好，但是自己能力有限目前只是实现了登录和对笔记的增删改。其中新增文章支持markdown语法。</p>
-<p>前端技术栈 vue2.0全家桶+Element-UI+axios+stylus</p>
-<p>后端技术栈 node.js+express+mysql<br>
-        
-          <a class="article-more-a" href="/2017/12/28/20171228/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/28/20171228/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20171015" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/15/20171015/">es6之Class的基本语法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/15/20171015/" class="archive-article-date">
-  	<time datetime="2017-10-15T08:42:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>ES6 的class可以看作只是一个语法糖，它的绝大部分功能，ES5 都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法。</p>
-<p>es5转es6示例
-        
-          <a class="article-more-a" href="/2017/10/15/20171015/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">es6笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">class</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">类</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/15/20171015/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20170930" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/30/20170930/">iframe 高度自适应</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/30/20170930/" class="archive-article-date">
-  	<time datetime="2017-09-30T08:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>可能因为一工作就上手vue.js的原因，感觉自己对一些原生的东西还是太生疏了<br>虽然有在看《JavaScript高级程序设计》然而对于使用较少的依然是使用较少<br>默念三遍’框架可以让你走的更快，原生可以让你走的更远’</p>
-<p>今天帮别人写了一点公共的东西，使用到iframe,说实在的工作一年以来对iframe接触甚少<br>借此机会总结一下</p>
-<ul>
-<li>如果没有设置iframe的高度的话，它有一个默认的150px的高度</li>
-<li>根据iframe里面内容的高度自适应
-        
-          <a class="article-more-a" href="/2017/09/30/20170930/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">iframe</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/30/20170930/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20170927" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/27/20170927/">移动端常见问题解决方案</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/27/20170927/" class="archive-article-date">
-  	<time datetime="2017-09-27T05:42:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>em。。。。<br>感觉移动端总有改不完的bug<br>苹果，安卓有区别<br>大屏，小屏幕区别
-        
-          <a class="article-more-a" href="/2017/09/27/20170927/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">适配</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/27/20170927/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-925" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/25/925/">项目总结的（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/25/925/" class="archive-article-date">
-  	<time datetime="2017-09-25T07:02:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>工作一年了，其实在工作中经常会遇见相同的问题<br>但是之前都没有总结，经常是这一次解决了，下一次又忘记了<br>所以决定以后将项目中遇到的问题，以及一些坑，都记录下来。
-        
-          <a class="article-more-a" href="/2017/09/25/925/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">适配</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目总结</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/25/925/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20170820" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/20/20170820/">使用vue+vuex+vue-router重构的vue.js社区手机端</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/20/20170820/" class="archive-article-date">
-  	<time datetime="2017-08-20T09:12:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>之前趁着空闲的时候写的一个小项目<br>主要是为了练练手，然后看到vue.js社区上有公共的api就想着拿来用<br>整个项目是使用vue-cli脚手架搭建的<br>使用的技术有<br>vue2 + vuex + vue-router + webpack + ES6 + axios + sass
-        
-          <a class="article-more-a" href="/2017/08/20/20170820/#more"></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vue.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vuex</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">vue-router</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/20/20170820/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20170705" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/05/20170705/">原生js练习系列——tab切换</a>
+    <h1 class="article-title" itemprop="name">
+      原生js练习系列——tab切换
     </h1>
   
 
@@ -761,9 +180,39 @@
       
         <p>tab切换也是项目中使用较多的一种效果，很多UI框架中也会有这种组件<br>今天使用原生的js写了一下，发现使用原生实现起来也很简单</p>
 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>tab切换可以简单的理解为切换显示/隐藏的div，点击相应的tab的时候显示其内容</p>
-        
-          <a class="article-more-a" href="/2017/07/05/20170705/#more"></a>
-        
+<a id="more"></a>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">  &lt;!--切换导航--&gt;</span><br><span class="line">  &lt;div class=&quot;header&quot;&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li onclick=&quot;changeBox(0)&quot;&gt;tabOne&lt;/li&gt;&lt;li onclick=&quot;changeBox(1)&quot;&gt;tabTwo&lt;/li&gt;&lt;li onclick=&quot;changeBox(2)&quot;&gt;tabThree&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;!--内容--&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;</span><br><span class="line">    内容一</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;</span><br><span class="line">    内容二</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;box&quot;&gt;</span><br><span class="line">    内容三</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//获取所有的内容</span><br><span class="line"> const box=document.getElementsByClassName(&apos;box&apos;);</span><br><span class="line"></span><br><span class="line">    changeBox=(i)=&gt;&#123;</span><br><span class="line">    //通过循环将他们的设置为隐藏</span><br><span class="line">      for(let j=0;j&lt;box.length;j++)&#123;</span><br><span class="line">        box[j].style.display=&apos;none&apos;</span><br><span class="line">      &#125;</span><br><span class="line">      box[i].style.display=&apos;block&apos;</span><br><span class="line">    &#125;;</span><br><span class="line">    //显示当前tab,默认显示第一个</span><br><span class="line">    changeBox(0);</span><br></pre></td></tr></table></figure>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">.header ul &#123;</span><br><span class="line">     margin: 0;</span><br><span class="line">     padding: 0;</span><br><span class="line">   &#125;</span><br><span class="line">   .header ul li &#123;</span><br><span class="line">     list-style-type: none;</span><br><span class="line">     cursor: pointer;</span><br><span class="line">     margin: 0;</span><br><span class="line">     padding: 0;</span><br><span class="line">     width: 110px;</span><br><span class="line">     background: #9E9E9E;</span><br><span class="line">     color: white;</span><br><span class="line">     display: inline-block;</span><br><span class="line">     height: 35px;</span><br><span class="line">     text-align: center;</span><br><span class="line">     line-height: 35px;</span><br><span class="line">     box-sizing: border-box;</span><br><span class="line">   &#125;</span><br><span class="line">   li + li &#123;</span><br><span class="line">     border-left: 1px solid white;</span><br><span class="line">   &#125;</span><br><span class="line">   .box &#123;</span><br><span class="line">     width: 330px;</span><br><span class="line">     height: 300px;</span><br><span class="line">     box-sizing: border-box;</span><br><span class="line">     border: 1px solid red;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><p>关于盒模型<br>盒模型分为两种即：W3C标准盒模型和IE标准盒子模型</p>
+<ul>
+<li><p>W3C标准盒模型：一个块的总宽度= width + margin(左右) + padding(左右) + border(左右)</p>
+</li>
+<li><p>IE标准盒子模型：一个块的总宽度= width + margin(左右)（即width已经包含了padding和border值）</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>CSS的box-sizing属性可以修改盒模型，其语法为</p>
+<blockquote>
+<pre><code>box-sizing: content-box|border-box|inherit;
+</code></pre></blockquote>
+<p>  <img src="/img/artImg/2017070501.png" alt="image"><br> 这里要说的是 border-box，设置这个属性后 盒模型的width=元素的宽度+padding和border</p>
+<ul>
+<li>关于dispaly：inline-block<br>在CSS中，html中的标签元素大体被分为三种不同的类型：块状元素、内联元素(又叫行内元素)和内联块状元素</li>
+</ul>
+<p>如果加两个元素的display属性都设置为inline-block 两个元素之前会出现一小块儿空白,如下所示：</p>
+<p><img src="/img/artImg/2017070502.png" alt="image"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;div style=&quot;display: inline-block;border: 1px solid black&quot;&gt;tabOne&lt;/div&gt;</span><br><span class="line">    &lt;div style=&quot;display: inline-block;border: 1px solid black&quot;&gt;tabTwo&lt;/div&gt;</span><br><span class="line">&lt;div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>产生空白的原因是：写html的时候换行的时候产生了一个空格，所以浏览器留了一个字符的位置。<br>解决的办法有：</p>
+<ul>
+<li><p>方法一：将html写在一行，不要换行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> &lt;div&gt;</span><br><span class="line">    &lt;div style=&quot;display: inline-block;border: 1px solid black&quot;&gt;tabOne&lt;/div&gt;&lt;div style=&quot;display: inline-block;border: 1px solid black&quot;&gt;tabTwo&lt;/div&gt;</span><br><span class="line">&lt;div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法二：设置fontsize：0</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;font-size:0&quot;&gt;</span><br><span class="line">      &lt;div style=&quot;display: inline-block;border: 1px solid black;font-size:12px&quot;&gt;tabOne&lt;/div&gt;</span><br><span class="line">      &lt;div style=&quot;display: inline-block;border: 1px solid black;font-size:12px&quot;&gt;tabTwo&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
 
       
@@ -789,16 +238,33 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/05/20170705/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/08/20/20170820/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          使用vue+vuex+vue-router重构的vue.js社区手机端
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/01/20170701/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">原生js练习系列——轮播</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -818,12 +284,40 @@
 
 
 
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<!--<div class="ds-thread" data-thread-key="20170705" data-title="原生js练习系列——tab切换" data-url="//litten.me/2017/07/05/20170705/"></div>-->
+
+	<!-- UY BEGIN -->
+	<div id="uyan_frame"></div>
+	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+	<!-- UY END -->
+
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<!--<script type="text/javascript">-->
+	<!--var duoshuoQuery = {short_name:"true"};-->
+	<!--(function() {-->
+		<!--var ds = document.createElement('script');-->
+		<!--ds.type = 'text/javascript';ds.async = true;-->
+		<!--ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';-->
+		<!--ds.charset = 'UTF-8';-->
+		<!--(document.getElementsByTagName('head')[0]-->
+		 <!--|| document.getElementsByTagName('body')[0]).appendChild(ds);-->
+	<!--})();-->
+	<!--</script>-->
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -846,8 +340,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

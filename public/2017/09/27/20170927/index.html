@@ -17,7 +17,7 @@
 <meta property="og:description" content="em。。。。感觉移动端总有改不完的bug苹果，安卓有区别大屏，小屏幕区别">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:image" content="//litten.me/img/artImg/09271.jpg">
-<meta property="og:updated_time" content="2017-10-26T07:00:13.925Z">
+<meta property="og:updated_time" content="2018-03-29T11:35:42.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端常见问题解决方案">
 <meta name="twitter:description" content="em。。。。感觉移动端总有改不完的bug苹果，安卓有区别大屏，小屏幕区别">
@@ -63,6 +63,8 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/other">杂记</a></li>
 	        
 				<li><a href="/tags">项目</a></li>
 	        
@@ -118,6 +120,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -131,12 +135,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags">项目</a></li>
+					<li style="width: 33.333333333333336%"><a href="/other">杂记</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags">项目</a></li>
 		        
 				</ul>
 			</nav>
@@ -183,46 +189,46 @@
 <li>window.devicePixelRatio 像素比（像素比把一个像素放大至N个像素去显示）</li>
 <li>设计图最少750以上</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,user-scalable=no&quot;&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="移动端常见的一些问题"><a href="#移动端常见的一些问题" class="headerlink" title="移动端常见的一些问题"></a>移动端常见的一些问题</h2><ul>
 <li>QQ强制横屏或者竖屏显示</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;x5-orientation&quot; content=&quot;portrait /&quot; /&gt;　或　content=&quot;landscape&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;x5-orientation&quot; content=&quot;portrait /&quot; /&gt;　或　content=&quot;landscape&quot;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>QQ设置全屏</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;x5-fullscreen&quot; content=&quot;true&quot; /&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;x5-fullscreen&quot; content=&quot;true&quot; /&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>UC强制竖屏或横屏显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait | landscape&quot; /&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait | landscape&quot; /&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>uc全屏显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot; /&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot; /&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>禁止识别电话号码和邮箱号码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no,email=no&quot; /&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no,email=no&quot; /&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>拨打电话和发邮箱</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a href=&quot;tel:电话号码&quot;&gt;电话号码&lt;/a&gt; 或　&lt;a href=&quot;mailto：邮箱地址&quot;&gt;请发送邮件&lt;/a&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;tel:电话号码&quot;&gt;电话号码&lt;/a&gt; 或　&lt;a href=&quot;mailto：邮箱地址&quot;&gt;请发送邮件&lt;/a&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>网页中百度地图跳转</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;address&quot;&gt;</div><div class="line">      &lt;ul&gt;</div><div class="line">          &lt;li&gt;收货方式:&lt;span&gt;活动成功后凭二维码到店自提&lt;/span&gt;&lt;/li&gt;</div><div class="line">          &lt;li&gt;自提地点:&lt;span&gt;园区店&lt;/span&gt;&lt;a class=&quot;map&quot; href=&quot;http://api.map.baidu.com/geocoder?address=苏州市枫津路30号&amp;output=html&amp;src=mc&quot;&gt;门店地址&lt;/a&gt;&lt;/li&gt;</div><div class="line">          &lt;li&gt;自提时间:&lt;span class=&quot;data&quot;&gt;2016.02.01-03.01&lt;/span&gt;&lt;/li&gt;</div><div class="line">      &lt;/ul&gt;</div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;address&quot;&gt;</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">          &lt;li&gt;收货方式:&lt;span&gt;活动成功后凭二维码到店自提&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">          &lt;li&gt;自提地点:&lt;span&gt;园区店&lt;/span&gt;&lt;a class=&quot;map&quot; href=&quot;http://api.map.baidu.com/geocoder?address=苏州市枫津路30号&amp;output=html&amp;src=mc&quot;&gt;门店地址&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">          &lt;li&gt;自提时间:&lt;span class=&quot;data&quot;&gt;2016.02.01-03.01&lt;/span&gt;&lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="默认样式"><a href="#默认样式" class="headerlink" title="默认样式"></a>默认样式</h2><ul>
 <li><p>清除点击阴影 -webkit-tap-highlight-color</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a,input,button&#123;</div><div class="line">    -webkit-tap-highlight-color: rgba(0,0,0,0)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a,input,button&#123;</span><br><span class="line">    -webkit-tap-highlight-color: rgba(0,0,0,0)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>清除按钮圆角　-webkit-appearance</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">input,button&#123;</div><div class="line">    -webkit-appearance: none;</div><div class="line">    border-radius:0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">input,button&#123;</span><br><span class="line">    -webkit-appearance: none;</span><br><span class="line">    border-radius:0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>默认字体设置　Helvetica</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    font-family:Helvetica;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">    font-family:Helvetica;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>禁止文字缩放</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">body　*&#123;</div><div class="line">    -webkit-text-size-adjust: 100%;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">body　*&#123;</span><br><span class="line">    -webkit-text-size-adjust: 100%;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>选中文字设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">body　*&#123;</div><div class="line">    -webkit-user-select: none; /*部分手机支持　*/</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">body　*&#123;</span><br><span class="line">    -webkit-user-select: none; /*部分手机支持　*/</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="移动端的其他问题"><a href="#移动端的其他问题" class="headerlink" title="移动端的其他问题"></a>移动端的其他问题</h2><ul>
@@ -245,7 +251,7 @@
 <li>百分比适配</li>
 <li>viewport适配</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">(function()&#123;</div><div class="line">    var w = window.screen.width;</div><div class="line">    var targetW = 320;</div><div class="line">    var scale = w/targetW; //当前尺寸/目标尺寸</div><div class="line">    var mate = document.createElement(&quot;mate&quot;);</div><div class="line">    mate.name = &quot;viewport&quot;;</div><div class="line">    mate.content = &quot;user-scalable=no,initial-scale=&quot;+scale+&quot;,minimum-scale=&quot;+scale+&quot;,maximum-scale=&quot;+scale+&quot;&quot;</div><div class="line">    document.head.appendChild(meta);</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(function()&#123;</span><br><span class="line">    var w = window.screen.width;</span><br><span class="line">    var targetW = 320;</span><br><span class="line">    var scale = w/targetW; //当前尺寸/目标尺寸</span><br><span class="line">    var mate = document.createElement(&quot;mate&quot;);</span><br><span class="line">    mate.name = &quot;viewport&quot;;</span><br><span class="line">    mate.content = &quot;user-scalable=no,initial-scale=&quot;+scale+&quot;,minimum-scale=&quot;+scale+&quot;,maximum-scale=&quot;+scale+&quot;&quot;</span><br><span class="line">    document.head.appendChild(meta);</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
 <ul>
 <li>rem适配</li>
 <li>弹性盒模型（box版和flex版）</li>
@@ -453,14 +459,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">适配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
               </li>
              
@@ -473,19 +471,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">适配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">iframe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">es6笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">class</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">类</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,15 +495,35 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">es6笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">class</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">组件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">项目总结</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
             <div class="clearfix"></div>
