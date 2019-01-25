@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//litten.me">
   <title>记使用vue+node+MySQL的搭建项目 | 马文卓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -25,7 +25,7 @@
 <meta property="og:image" content="//litten.me/img/artImg/pie.png">
 <meta property="og:image" content="//litten.me/img/artImg/table.png">
 <meta property="og:image" content="//litten.me/img/artImg/tree.png">
-<meta property="og:updated_time" content="2018-03-29T11:35:42.438Z">
+<meta property="og:updated_time" content="2019-01-23T07:51:54.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记使用vue+node+MySQL的搭建项目">
 <meta name="twitter:description" content="前言这应该算是第一个前后端都是自己写的项目。整个项目的前期构想是希望能够实现一个个人的工作平台，可以记录一些自己的工作笔记、心得，能够建立备忘录提醒自己还有那些事情需要做。以后可以和整个公司的考勤，薪资等等结合起来。想法很美好，但是自己能力有限目前只是实现了登录和对笔记的增删改。其中新增文章支持markdown语法。 前端技术栈 vue2.0全家桶+Element-UI+axios+stylus">
@@ -48,7 +48,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -72,9 +72,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/other">杂记</a></li>
+				<li><a href="/tags/">项目</a></li>
 	        
-				<li><a href="/tags">项目</a></li>
+				<li><a href="/others/">资源汇总</a></li>
 	        
 			</ul>
 		</nav>
@@ -148,9 +148,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/other">杂记</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/">项目</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags">项目</a></li>
+					<li style="width: 33.333333333333336%"><a href="/others/">资源汇总</a></li>
 		        
 				</ul>
 			</nav>
@@ -165,7 +165,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20171228" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20171228" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -201,7 +201,7 @@
 <h3 id="访问地址"><a href="#访问地址" class="headerlink" title="访问地址"></a>访问地址</h3><p><a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p>
 <h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h3><p>npm run build</p>
 <h3 id="页面截图"><a href="#页面截图" class="headerlink" title="页面截图"></a>页面截图</h3><p><img src="/img/artImg/login.jpg" alt="image"><br><img src="/img/artImg/login2.png" alt="image"><br><img src="/img/artImg/notelist.png" alt="image"><br><img src="/img/artImg/editnote.png" alt="image"><br><img src="/img/artImg/notepad.png" alt="image"><br><img src="/img/artImg/chart.png" alt="image"><br><img src="/img/artImg/pie.png" alt="image"><br><img src="/img/artImg/table.png" alt="image"><br><img src="/img/artImg/tree.png" alt="image"></p>
-<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">│  .babelrc                 // ES6语法编译配置</span><br><span class="line">│  .editorconfig            // 代码编写规格</span><br><span class="line">│  .eslintignore</span><br><span class="line">│  .eslintrc.js</span><br><span class="line">│  .gitignore               // 忽略的文件     </span><br><span class="line">│  .postcssrc.js</span><br><span class="line">│  index.html               // 入口html文件</span><br><span class="line">│  package-lock.json</span><br><span class="line">│  package.json             // 项目及工具的依赖配置文件</span><br><span class="line">│  README.md                // 说明</span><br><span class="line">         </span><br><span class="line">├─build                     //webpack配置文件</span><br><span class="line">│      </span><br><span class="line">├─config</span><br><span class="line">│      dev.env.js</span><br><span class="line">│      index.js</span><br><span class="line">│      prod.env.js</span><br><span class="line">│      test.env.js     </span><br><span class="line">│                  </span><br><span class="line">├─server                     //后端服务</span><br><span class="line">│  │  db.js                  //数据库</span><br><span class="line">│  │  index.js               //入口文件</span><br><span class="line">│  │  sqlMap.js              //sql语句</span><br><span class="line">│  │  </span><br><span class="line">│  └─api                    //api</span><br><span class="line">│          artApi.js </span><br><span class="line">│          userApi.js</span><br><span class="line">│          </span><br><span class="line">├─src</span><br><span class="line">│  │  App.vue               // 页面入口文件</span><br><span class="line">│  │  main.js               // 程序入口文件，加载各种公共组件</span><br><span class="line">│  │      </span><br><span class="line">│  ├─components             //页面</span><br><span class="line">│  │  │  chart.vue          </span><br><span class="line">│  │  │  editNote.vue</span><br><span class="line">│  │  │  HelloWorld.vue</span><br><span class="line">│  │  │  index.vue</span><br><span class="line">│  │  │  login.vue</span><br><span class="line">│  │  │  noteList.vue</span><br><span class="line">│  │  │  notepad.vue</span><br><span class="line">│  │  │  pie.vue</span><br><span class="line">│  │  │  table.vue</span><br><span class="line">│  │  │  tree.vue</span><br><span class="line">│  │  │  </span><br><span class="line">│  │  └─nav                 //公共导航组件</span><br><span class="line">│  │          header-nav.vue</span><br><span class="line">│  │          left-nav.vue</span><br><span class="line">│  │          </span><br><span class="line">│  ├─image</span><br><span class="line">│  │      bg.jpg</span><br><span class="line">│  │      chart.png</span><br><span class="line">│  │      editnote.png</span><br><span class="line">│  │      head.jpg</span><br><span class="line">│  │      login.jpg</span><br><span class="line">│  │      login2.png</span><br><span class="line">│  │      notelist.png</span><br><span class="line">│  │      notepad.png</span><br><span class="line">│  │      pie.png</span><br><span class="line">│  │      table.png</span><br><span class="line">│  │      tree.png</span><br><span class="line">│  │      </span><br><span class="line">│  ├─router</span><br><span class="line">│  │      index.js</span><br><span class="line">│  │      </span><br><span class="line">│  ├─store                   // vuex的状态管理</span><br><span class="line">│  │      action.js</span><br><span class="line">│  │      common.js          //公共js</span><br><span class="line">│  │      getdata.js         //获取接口数据</span><br><span class="line">│  │      index.js</span><br><span class="line">│  │      mutations.js</span><br><span class="line">│  │      </span><br><span class="line">│  └─style                     //样式</span><br><span class="line">│      │  chart.styl</span><br><span class="line">│      │  common.styl</span><br><span class="line">│      │  editNote.styl</span><br><span class="line">│      │  index.styl</span><br><span class="line">│      │  login.styl</span><br><span class="line">│      │  noteList.styl</span><br><span class="line">│      │  notepad.styl</span><br><span class="line">│      │  pie.styl</span><br><span class="line">│      │  table.styl</span><br><span class="line">│      │  tree.styl</span><br><span class="line">│      │  </span><br><span class="line">│      └─base</span><br><span class="line">│              reset.styl</span><br><span class="line">│</span><br></pre></td></tr></table></figure>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">│  .babelrc                 // ES6语法编译配置</span><br><span class="line">│  .editorconfig            // 代码编写规格</span><br><span class="line">│  .eslintignore</span><br><span class="line">│  .eslintrc.js</span><br><span class="line">│  .gitignore               // 忽略的文件</span><br><span class="line">│  .postcssrc.js</span><br><span class="line">│  index.html               // 入口html文件</span><br><span class="line">│  package-lock.json</span><br><span class="line">│  package.json             // 项目及工具的依赖配置文件</span><br><span class="line">│  README.md                // 说明</span><br><span class="line"></span><br><span class="line">├─build                     //webpack配置文件</span><br><span class="line">│</span><br><span class="line">├─config</span><br><span class="line">│      dev.env.js</span><br><span class="line">│      index.js</span><br><span class="line">│      prod.env.js</span><br><span class="line">│      test.env.js</span><br><span class="line">│</span><br><span class="line">├─server                     //后端服务</span><br><span class="line">│  │  db.js                  //数据库</span><br><span class="line">│  │  index.js               //入口文件</span><br><span class="line">│  │  sqlMap.js              //sql语句</span><br><span class="line">│  │</span><br><span class="line">│  └─api                    //api</span><br><span class="line">│          artApi.js</span><br><span class="line">│          userApi.js</span><br><span class="line">│</span><br><span class="line">├─src</span><br><span class="line">│  │  App.vue               // 页面入口文件</span><br><span class="line">│  │  main.js               // 程序入口文件，加载各种公共组件</span><br><span class="line">│  │</span><br><span class="line">│  ├─components             //页面</span><br><span class="line">│  │  │  chart.vue</span><br><span class="line">│  │  │  editNote.vue</span><br><span class="line">│  │  │  HelloWorld.vue</span><br><span class="line">│  │  │  index.vue</span><br><span class="line">│  │  │  login.vue</span><br><span class="line">│  │  │  noteList.vue</span><br><span class="line">│  │  │  notepad.vue</span><br><span class="line">│  │  │  pie.vue</span><br><span class="line">│  │  │  table.vue</span><br><span class="line">│  │  │  tree.vue</span><br><span class="line">│  │  │</span><br><span class="line">│  │  └─nav                 //公共导航组件</span><br><span class="line">│  │          header-nav.vue</span><br><span class="line">│  │          left-nav.vue</span><br><span class="line">│  │</span><br><span class="line">│  ├─image</span><br><span class="line">│  │      bg.jpg</span><br><span class="line">│  │      chart.png</span><br><span class="line">│  │      editnote.png</span><br><span class="line">│  │      head.jpg</span><br><span class="line">│  │      login.jpg</span><br><span class="line">│  │      login2.png</span><br><span class="line">│  │      notelist.png</span><br><span class="line">│  │      notepad.png</span><br><span class="line">│  │      pie.png</span><br><span class="line">│  │      table.png</span><br><span class="line">│  │      tree.png</span><br><span class="line">│  │</span><br><span class="line">│  ├─router</span><br><span class="line">│  │      index.js</span><br><span class="line">│  │</span><br><span class="line">│  ├─store                   // vuex的状态管理</span><br><span class="line">│  │      action.js</span><br><span class="line">│  │      common.js          //公共js</span><br><span class="line">│  │      getdata.js         //获取接口数据</span><br><span class="line">│  │      index.js</span><br><span class="line">│  │      mutations.js</span><br><span class="line">│  │</span><br><span class="line">│  └─style                     //样式</span><br><span class="line">│      │  chart.styl</span><br><span class="line">│      │  common.styl</span><br><span class="line">│      │  editNote.styl</span><br><span class="line">│      │  index.styl</span><br><span class="line">│      │  login.styl</span><br><span class="line">│      │  noteList.styl</span><br><span class="line">│      │  notepad.styl</span><br><span class="line">│      │  pie.styl</span><br><span class="line">│      │  table.styl</span><br><span class="line">│      │  tree.styl</span><br><span class="line">│      │</span><br><span class="line">│      └─base</span><br><span class="line">│              reset.styl</span><br><span class="line">│</span><br></pre></td></tr></table></figure>
 
       
 
@@ -273,6 +273,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#后端接口部分"><span class="toc-number">1.1.</span> <span class="toc-text">后端接口部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端部分"><span class="toc-number">1.2.</span> <span class="toc-text">前端部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#github地址"><span class="toc-number">1.3.</span> <span class="toc-text">github地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">1.4.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行"><span class="toc-number">1.5.</span> <span class="toc-text">运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问地址"><span class="toc-number">1.6.</span> <span class="toc-text">访问地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打包"><span class="toc-number">1.7.</span> <span class="toc-text">打包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#页面截图"><span class="toc-number">1.8.</span> <span class="toc-text">页面截图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目录结构"><span class="toc-number">1.9.</span> <span class="toc-text">目录结构</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -322,7 +335,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 马文卓
+    		&copy; 2019 马文卓
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -433,18 +446,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">es6笔记</a>
               </li>
              
@@ -457,6 +458,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
@@ -465,7 +478,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">babel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">iscroll</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -475,13 +500,17 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

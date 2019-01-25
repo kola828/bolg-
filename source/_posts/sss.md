@@ -1,9 +1,10 @@
 ---
-layout: posts
+layout: post
 title: 第一次使用Hexo + Github Page 搭建个人博客
 date: 2017-06-20 14:28:19
 tags: Hexo
 reward: false
+toc: true
 ---
 
 最近工作比较闲，没有什么事情做。于是想搭建一个自己的博客
@@ -27,7 +28,7 @@ reward: false
 - 新建gitHub仓库
 
 此处请注意 !!!
-- 输入Reposiry name　的格式为　yourname.github.io　(yourname与你的注册用户名一致，此处为固定格式。) 
+- 输入Reposiry name　的格式为　yourname.github.io　(yourname与你的注册用户名一致，此处为固定格式。)
 - 点击  Create repository 仓库创建成功
 ![image](/img/artImg/09-20_one.png)
 - 先不用初始化git,直接点击，然后拉到下方 GitHub Pages 那个地方,先随意选择一个主题然后清空仓库
@@ -43,7 +44,7 @@ reward: false
  首先中文文档奉上 https://hexo.io/zh-cn/docs/
  (注意 请尽量使用git操作，不要使用cmd命令窗口)
  -  安装hexo
- ``` 
+ ```
   $ npm install -g hexo-cli
   ```
  -  安装完成后,请执行下列命令。
@@ -106,9 +107,8 @@ deploy:
 访问 https://（你的github名称）.github.io/  就可以看到你的博客了
 
  ### 结束
- 
+
  这篇教程只是搭建一个简单的博客，你也可以根据你的需求，进行修改.
  当然你也可以选择不同的主题对你的博客进行美化
  这篇文章里有一些好看的hexo主题推荐,希望可以给你带来帮助
  https://www.zhihu.com/question/24422335
- 

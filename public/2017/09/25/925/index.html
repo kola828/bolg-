@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//litten.me">
   <title>项目总结的（一） | 马文卓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="马文卓">
 <meta property="og:description" content="工作一年了，其实在工作中经常会遇见相同的问题但是之前都没有总结，经常是这一次解决了，下一次又忘记了所以决定以后将项目中遇到的问题，以及一些坑，都记录下来。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-03-29T11:35:42.438Z">
+<meta property="og:updated_time" content="2019-01-23T07:51:32.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="项目总结的（一）">
 <meta name="twitter:description" content="工作一年了，其实在工作中经常会遇见相同的问题但是之前都没有总结，经常是这一次解决了，下一次又忘记了所以决定以后将项目中遇到的问题，以及一些坑，都记录下来。">
@@ -38,7 +38,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -62,9 +62,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/other">杂记</a></li>
+				<li><a href="/tags/">项目</a></li>
 	        
-				<li><a href="/tags">项目</a></li>
+				<li><a href="/others/">资源汇总</a></li>
 	        
 			</ul>
 		</nav>
@@ -138,9 +138,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/other">杂记</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/">项目</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags">项目</a></li>
+					<li style="width: 33.333333333333336%"><a href="/others/">资源汇总</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,7 +155,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-925" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-925" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -215,9 +215,9 @@
 <p>方法二</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(function(doc, win) &#123;</span><br><span class="line">    var docEl = doc.documentElement,</span><br><span class="line">        resizeEvt = &apos;orientationchange&apos; in window ? &apos;orientationchange&apos; : &apos;resize&apos;,</span><br><span class="line">        recalc = function() &#123;</span><br><span class="line">            var clientWidth = docEl.clientWidth;</span><br><span class="line">            if (!clientWidth) return;</span><br><span class="line">            docEl.style.fontSize = 14 * (clientWidth / 320) + &apos;px&apos;;</span><br><span class="line">        &#125;;</span><br><span class="line">    if (!doc.addEventListener) return;</span><br><span class="line">    win.addEventListener(resizeEvt, recalc, false);</span><br><span class="line">    doc.addEventListener(&apos;DOMContentLoaded&apos;, recalc, false);</span><br><span class="line">&#125;)(document, window);</span><br></pre></td></tr></table></figure>
 <h3 id="2-viewport缩放"><a href="#2-viewport缩放" class="headerlink" title="2.viewport缩放"></a>2.viewport缩放</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=320,maximum-scale=1.3,user-scalable=no&quot;&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="3-媒体查询"><a href="#3-媒体查询" class="headerlink" title="3.媒体查询"></a>3.媒体查询</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@media screen and (min-width: 320px) &#123;</span><br><span class="line">    html &#123;font-size: 14px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">@media screen and (min-width: 360px) &#123;</span><br><span class="line">    html &#123;font-size: 16px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">@media screen and (min-width: 400px) &#123;</span><br><span class="line">    html &#123;font-size: 18px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">@media screen and (min-width: 440px) &#123;</span><br><span class="line">    html &#123;font-size: 20px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">@media screen and (min-width: 480px) &#123;</span><br><span class="line">    html &#123;font-size: 22px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">@media screen and (min-width: 640px) &#123;</span><br><span class="line">    html &#123;font-size: 28px;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-媒体查询"><a href="#3-媒体查询" class="headerlink" title="3.媒体查询"></a>3.媒体查询</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@media screen and (min-width: 320px) &#123;</span><br><span class="line">    html &#123;font-size: 14px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (min-width: 360px) &#123;</span><br><span class="line">    html &#123;font-size: 16px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (min-width: 400px) &#123;</span><br><span class="line">    html &#123;font-size: 18px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (min-width: 440px) &#123;</span><br><span class="line">    html &#123;font-size: 20px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (min-width: 480px) &#123;</span><br><span class="line">    html &#123;font-size: 22px;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media screen and (min-width: 640px) &#123;</span><br><span class="line">    html &#123;font-size: 28px;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="4-vw"><a href="#4-vw" class="headerlink" title="4.vw"></a>4.vw</h3><p>不知道大家是不是把 rem 设置成了某个比较好算的宽度，所以切图更得心应手，但 vw 其实是 1% 个屏幕宽度,的确这样算起来不方便，这我觉得算是一个vw不好的地方。但是，作为一名与时俱进的前端工程师，你知道 CSS3 有个函数叫 calc 吗？有人可能会说 calc 目前支持度还有点问题。你知道 SASS 或者 LESS 吧？你知道它们是可以做算术题的吧？你知道它们可以写 function 吧？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--Sass--&gt;</span><br><span class="line">@function pxToVw($px, $screen-width: 750) &#123; </span><br><span class="line">  @return ($px / $screen-width) * 100vw;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--Sass--&gt;</span><br><span class="line">@function pxToVw($px, $screen-width: 750) &#123;</span><br><span class="line">  @return ($px / $screen-width) * 100vw;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -289,6 +289,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#表单提交时input获取焦点安卓手机软键盘弹出有时会遮挡内容解决方案"><span class="toc-number">1.</span> <span class="toc-text">表单提交时input获取焦点安卓手机软键盘弹出有时会遮挡内容解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#label与radio绑定的方法"><span class="toc-number">2.</span> <span class="toc-text">label与radio绑定的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css-技巧总结"><span class="toc-number">3.</span> <span class="toc-text">css 技巧总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-滚动不流畅-主要是ios"><span class="toc-number">3.1.</span> <span class="toc-text">1.滚动不流畅(主要是ios)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-pointer-events-none的用处"><span class="toc-number">3.2.</span> <span class="toc-text">2.pointer-events: none的用处</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-radio与checkbox的美化"><span class="toc-number">3.3.</span> <span class="toc-text">3.radio与checkbox的美化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-尽量少使用-filter-属性"><span class="toc-number">3.4.</span> <span class="toc-text">4.尽量少使用 filter 属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-动画卡顿的解决办法"><span class="toc-number">3.5.</span> <span class="toc-text">5.动画卡顿的解决办法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-改变input里placeholder默认显示字的样式"><span class="toc-number">3.6.</span> <span class="toc-text">6.改变input里placeholder默认显示字的样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-ios上input有时有默认的内部阴影"><span class="toc-number">3.7.</span> <span class="toc-text">7.ios上input有时有默认的内部阴影</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-label两端对齐的方法（存在兼容性问题）"><span class="toc-number">3.8.</span> <span class="toc-text">6.label两端对齐的方法（存在兼容性问题）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-布局"><span class="toc-number">4.</span> <span class="toc-text">flex 布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制微信自带的返回按钮"><span class="toc-number">5.</span> <span class="toc-text">控制微信自带的返回按钮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js实现复制内容到剪切板"><span class="toc-number">6.</span> <span class="toc-text">js实现复制内容到剪切板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于css设计模式"><span class="toc-number">7.</span> <span class="toc-text">关于css设计模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于手机端自适应"><span class="toc-number">8.</span> <span class="toc-text">关于手机端自适应</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-rem"><span class="toc-number">8.1.</span> <span class="toc-text">1.rem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-viewport缩放"><span class="toc-number">8.2.</span> <span class="toc-text">2.viewport缩放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-媒体查询"><span class="toc-number">8.3.</span> <span class="toc-text">3.媒体查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-vw"><span class="toc-number">8.4.</span> <span class="toc-text">4.vw</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -338,7 +351,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 马文卓
+    		&copy; 2019 马文卓
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -449,18 +462,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">es6笔记</a>
               </li>
              
@@ -473,6 +474,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
@@ -481,7 +494,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">babel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">iscroll</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -491,13 +516,17 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

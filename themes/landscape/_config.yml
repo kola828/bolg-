@@ -2,8 +2,8 @@
 
 menu:
   主页: /
-  杂记: /tags/随笔
   项目: /tags/
+  资源汇总: /others/
 
 # SubNav
 subnav:
