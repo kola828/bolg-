@@ -8,18 +8,20 @@
   <link rel="dns-prefetch" href="//litten.me">
   <title>babel插件开发 | 马文卓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="背景目前画容组件对象包，引入一些惊鸿的特殊文件采用的是一下的这种格式">
+  <meta name="description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。">
 <meta name="keywords" content="babel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="babel插件开发">
 <meta property="og:url" content="//litten.me/2018/07/15/20180715/index.html">
 <meta property="og:site_name" content="马文卓">
-<meta property="og:description" content="背景目前画容组件对象包，引入一些惊鸿的特殊文件采用的是一下的这种格式">
+<meta property="og:description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2019-01-23T08:51:48.015Z">
+<meta property="og:image" content="https://camo.githubusercontent.com/3edbcbae5d55b2640162c3349df257fad5df783c/687474703a2f2f70302e7168696d672e636f6d2f743031396333376361633732333661363535642e706e67">
+<meta property="og:updated_time" content="2019-02-22T08:01:11.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="babel插件开发">
-<meta name="twitter:description" content="背景目前画容组件对象包，引入一些惊鸿的特殊文件采用的是一下的这种格式">
+<meta name="twitter:description" content="写在前面本文将以把es6的语法let改为var为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/3edbcbae5d55b2640162c3349df257fad5df783c/687474703a2f2f70302e7168696d672e636f6d2f743031396333376361633732333661363535642e706e67">
   
     <link rel="alternative" href="/atom.xml" title="马文卓" type="application/atom+xml">
   
@@ -64,7 +66,7 @@
 	        
 				<li><a href="/tags/">项目</a></li>
 	        
-				<li><a href="/others/">资源汇总</a></li>
+				<li><a href="/others/">简历</a></li>
 	        
 			</ul>
 		</nav>
@@ -140,7 +142,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/">项目</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/others/">资源汇总</a></li>
+					<li style="width: 33.333333333333336%"><a href="/others/">简历</a></li>
 		        
 				</ul>
 			</nav>
@@ -175,42 +177,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>目前画容组件对象包，引入一些惊鸿的特殊文件采用的是一下的这种格式<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var abc = hall(&apos;./obj/abc&apos;);</span><br></pre></td></tr></table></figure></p>
-<p>由于之后将会公开组件对象包的开发，其他开发者并不能很好的明白<code>hall</code>的含义，需要一个babel插件 将js文件中的 <code>var abc = require(&#39;hong/obj/abc&#39;)</code>改为<code>var abc = hall(&#39;./obj/abc&#39;)</code>格式。</p>
-<h3 id="简单了解ast-抽象语法树"><a href="#简单了解ast-抽象语法树" class="headerlink" title="简单了解ast(抽象语法树)"></a>简单了解ast(抽象语法树)</h3><p>webpack，babel，eslint等工具的原理都是通过JavaScript Parser(解析器)把代码转化为一颗抽象语法树。这颗树定义了代码的结构，使我们可以精确的定位到代码的声明语句，赋值语句等。从而实现对代码的优化，分析，变更等操作。</p>
-<p>常见的几种用途：</p>
+        <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>本文将以把es6的语法<code>let</code>改为<code>var</code>为例，讲述如何编写一个babel插件。其中涉及到一些babel的基本知识，babel的工作流程，语法抽象树等。</p>
+<a id="more"></a>
+<h3 id="babel简介"><a href="#babel简介" class="headerlink" title="babel简介"></a>babel简介</h3><p>关于babel 官网做了如下解释:</p>
+<blockquote>
+<p>Babel 是一个工具链，主要用于在旧的浏览器或环境中将 ECMAScript 2015+ 代码转换为向后兼容版本的 JavaScript 代码</p>
+</blockquote>
+<p>相信大家在开发中或多或少的都使用过<code>bable</code>对代码进行编译。在babel配置文件<code>.babelrc</code>中最主要就是对<code>presets</code>和<code>Plugins</code>的配置。其中<code>presets</code>通俗来说就是某一类的插件转译集合，比如说babel官方封装好的<code>@babel/preset-react</code>中就包括以下插件<code>@babel/plugin-syntax-jsx</code>，<code>@babel/plugin-transform-react-jsx</code>，<code>@babel/plugin-transform-react-display-name</code>。而Plugins相对来说功能比较单一，比如<code>transform-es2015-arrow-functions</code>，这个插件只负责转译es2015新增的箭头函数。</p>
+<p>所以在我们的日常开发中也可以根据自己的需求开发bebal插件，从而提高开发效率。</p>
+<h3 id="babel的编译过程"><a href="#babel的编译过程" class="headerlink" title="babel的编译过程"></a>babel的编译过程</h3><p>Babel转码的过程分三个阶段：解析(parse)、转换(transform)、生成(generate)。下面这张图可以很好的说明babel的工作过程</p>
+<p><img src="https://camo.githubusercontent.com/3edbcbae5d55b2640162c3349df257fad5df783c/687474703a2f2f70302e7168696d672e636f6d2f743031396333376361633732333661363535642e706e67" alt="image"></p>
 <ul>
-<li>代码语法的检查、代码风格的检查、代码的格式化、代码的高亮、代码错误提示、代码自动补全等等<ul>
-<li>如JSLint、JSHint对代码错误或风格的检查，发现一些潜在的错误</li>
-<li>IDE的错误提示、格式化、高亮、自动补全等等</li>
+<li>解析,解析步骤接收代码并输出 AST。</li>
+<li>转换,转换步骤接收AST并对其进行遍历，在此过程中对节点进行添加、更新及移除等操作</li>
+<li>生成,代码生成步骤把最终（经过一系列转换之后）的 AST 转换成字符串形式的代码，同时还会创建源码映射（source maps）。</li>
 </ul>
-</li>
-<li>代码混淆压缩<ul>
-<li>UglifyJS2等</li>
-</ul>
-</li>
-<li>优化变更代码，改变代码结构使达到想要的结构<ul>
-<li>代码打包工具webpack、rollup等等</li>
-<li>CommonJS、AMD、CMD、UMD等代码规范之间的转化</li>
-<li>CoffeeScript、TypeScript、JSX等转化为原生Javascript</li>
-</ul>
-</li>
-</ul>
-<p>这里是可以实时查看代码ast结构的链接<a href="https://astexplorer.net/" target="_blank" rel="noopener">https://astexplorer.net/</a></p>
-<h3 id="安装-babel-cli-babel-core"><a href="#安装-babel-cli-babel-core" class="headerlink" title="安装@babel/cli,@babel/core"></a>安装@babel/cli,@babel/core</h3><p>可用于从命令行编译文件</p>
+<p>其中，解析、生成阶段由Babel核心完成，而转换阶段，则由Babel插件完成，这也是本文的重点。</p>
+<h3 id="抽象语法树（AST）"><a href="#抽象语法树（AST）" class="headerlink" title="抽象语法树（AST）"></a>抽象语法树（AST）</h3><blockquote>
+<p>在计算机科学中，抽象语法树（Abstract Syntax Tree，AST），或简称语法树（Syntax tree），是源代码语法结构的一种抽象表示。它以树状的形式表现编程语言的语法结构，树上的每个节点都表示源代码中的一种结构。之所以说语法是“抽象”的，是因为这里的语法并不会表示出真实语法中出现的每个细节。</p>
+</blockquote>
+<p>开发一个babel插件一定要对AST有所了解，上面是维基百科对抽象语法树的解释</p>
+<p>举个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = 1;</span><br></pre></td></tr></table></figure></p>
+<p>转换成的AST结构为：</p>
+<p><a href="./1.png">image</a>;<br><a href="./2.png">image</a>;</p>
+<p>这里是可以实时查看代码ast结构的网站<a href="https://astexplorer.net/" target="_blank" rel="noopener">https://astexplorer.net/</a>，有助于更好的了解ast以及编写babel插件</p>
+<hr>
+<h3 id="开发babel插件"><a href="#开发babel插件" class="headerlink" title="开发babel插件"></a>开发babel插件</h3><h4 id="安装-babel-cli-babel-core"><a href="#安装-babel-cli-babel-core" class="headerlink" title="安装@babel/cli,@babel/core"></a>安装@babel/cli,@babel/core</h4><p>可用于从命令行编译文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;@babel/cli&quot;: &quot;^7.1.5&quot;,</span><br><span class="line">&quot;@babel/core&quot;: &quot;^7.1.6&quot;,</span><br></pre></td></tr></table></figure>
-<h3 id="新建js文件"><a href="#新建js文件" class="headerlink" title="新建js文件"></a>新建js文件</h3><p>新建一个<code>babel-require2hall-hong.js</code>文件，代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function require2hall(babel) &#123;</span><br><span class="line">  const &#123; types: t, template &#125; = babel;</span><br><span class="line">  const visitor = &#123;</span><br><span class="line">    CallExpression(path) &#123;</span><br><span class="line">      var main = path.node.callee;</span><br><span class="line">      // 过滤类型不是Identifier和不是require的</span><br><span class="line">      if (main &amp;&amp; main.type === &apos;Identifier&apos; &amp;&amp; main.name === &apos;require&apos;) &#123;</span><br><span class="line">        var sname = path.node.arguments[0];</span><br><span class="line">        // 判断是不是以hong 开头</span><br><span class="line">        if (sname &amp;&amp; sname.type === &apos;StringLiteral&apos; &amp;&amp; sname.value.startsWith(&apos;hong/&apos;)) &#123;</span><br><span class="line">          var a = sname.value.slice(4);</span><br><span class="line">          // 直接使用babel内置模板生成新的ast节点</span><br><span class="line">          var neoTemplate = template(`hall(&quot;$&#123;a&#125;&quot;)`);</span><br><span class="line">          var ast = neoTemplate(&#123;&#125;);</span><br><span class="line">          path.replaceWith(ast)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  return &#123;visitor&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = require2hall;</span><br></pre></td></tr></table></figure></p>
-<h3 id="修改-eslintrc-js文件"><a href="#修改-eslintrc-js文件" class="headerlink" title="修改.eslintrc.js文件"></a>修改<code>.eslintrc.js</code>文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  env: &#123;&#125;,</span><br><span class="line">  plugins: [ &apos;./babel-require2hall-hong.js&apos; ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li><p>babel插件开发，简而言之就是替换你想要替换的ast节点。上面只是一个简单的示例，但以小见大，一些es转es5的插件应该也是一样的道理。</p>
-</li>
-<li><p>替换，或插入都需要插入ast。有两种方法</p>
-<ul>
-<li>使用babel内置的template模板（推荐）</li>
-<li>自己手写ast</li>
-</ul>
-</li>
-</ul>
+<h4 id="新建js文件"><a href="#新建js文件" class="headerlink" title="新建js文件"></a>新建js文件</h4><p>新建一个<code>babel-letToVar.js</code>文件，代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function letToVar(babel) &#123;</span><br><span class="line"></span><br><span class="line">  const &#123; types: t, template &#125; = babel;</span><br><span class="line">  return visitor = &#123; &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = letToVar;</span><br></pre></td></tr></table></figure>
+<p>我们可以在<code>letToVar</code>这个方法中接收babel对象。</p>
+<p>visitor 属性是这个插件的主要访问者，且其中的每个函数接收2个参数：path 和 stat。访问者是一个用于 AST 遍历的跨语言的模式。简单的说它们就是一个对象，定义了用于在一个树状结构中获取具体节点的方法。</p>
+<p>我们的需求是将<code>let</code>转换成<code>var</code>,那么我们需要添加一个<code>VariableDeclaration</code>访问者方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function letToVar(babel) &#123;</span><br><span class="line">  const &#123; types: t, template &#125; = babel;</span><br><span class="line">  const visitor = &#123;</span><br><span class="line">    VariableDeclaration(path) &#123;</span><br><span class="line">      if(path.get(&apos;kind&apos;).node!=&apos;let&apos;)return;</span><br><span class="line">        path.node.kind=&apos;var&apos;;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  return &#123;visitor&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = letToVar;</span><br></pre></td></tr></table></figure>
+<p>我们可以通过path.get()方法获取到kind,并判断他是不是为let，如果是就将其改为var，以实现我们的需求。</p>
+<p>下面我们可以运行看一下效果是否符合我们的预期。</p>
+<h4 id="新建-eslintrc文件"><a href="#新建-eslintrc文件" class="headerlink" title="新建.eslintrc文件"></a>新建<code>.eslintrc</code>文件</h4><p>我们可以直接在此文件中引入我们的babel-letToVar.js文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;plugins&quot;: [ &quot;./babel-letToVar.js&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="运行并查看效果"><a href="#运行并查看效果" class="headerlink" title="运行并查看效果"></a>运行并查看效果</h4><p>我们可以在终端运行下面命令，将inedx.js文件编译后输出到dest.js文件中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ babel index.js --out-file dest.js</span><br></pre></td></tr></table></figure></p>
+<p>下图是运行效果，可以看到已经实现了我们的需求。<br><a href="./3.png">image</a>;<br><a href="./4.png">image</a>;</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>本文演示的只是一个简单的babel插件的开发，我们在转换的过程中拿到代码的AST结构后，就可以随心所欲的对代码进行增加、删除、修改。我们还可以通过编写babel插件实现更多的功能，比如删除代码中所有<code>console.log</code>等。</p>
 
       
 
@@ -281,7 +286,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单了解ast-抽象语法树"><span class="toc-number">2.</span> <span class="toc-text">简单了解ast(抽象语法树)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-babel-cli-babel-core"><span class="toc-number">3.</span> <span class="toc-text">安装@babel/cli,@babel/core</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建js文件"><span class="toc-number">4.</span> <span class="toc-text">新建js文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-eslintrc-js文件"><span class="toc-number">5.</span> <span class="toc-text">修改.eslintrc.js文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#babel简介"><span class="toc-number">2.</span> <span class="toc-text">babel简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#babel的编译过程"><span class="toc-number">3.</span> <span class="toc-text">babel的编译过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽象语法树（AST）"><span class="toc-number">4.</span> <span class="toc-text">抽象语法树（AST）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开发babel插件"><span class="toc-number">5.</span> <span class="toc-text">开发babel插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装-babel-cli-babel-core"><span class="toc-number">5.1.</span> <span class="toc-text">安装@babel/cli,@babel/core</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新建js文件"><span class="toc-number">5.2.</span> <span class="toc-text">新建js文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新建-eslintrc文件"><span class="toc-number">5.3.</span> <span class="toc-text">新建.eslintrc文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#运行并查看效果"><span class="toc-number">5.4.</span> <span class="toc-text">运行并查看效果</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -488,10 +493,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">babel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iscroll</a>
               </li>
              
               <li class="article-tag-list-item">
